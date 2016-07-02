@@ -1,21 +1,27 @@
 <h1>Anime Club</h1>
+<%= link_to "Add Anime", new_anime_path, class: 'btn btn-primary' %>
 <div class="panel-group" id="accordion">
 	<% @anime.each do |a| %>
 		<div class="panel panel-default">
 	    <div class="panel-heading">
 	      <h4 class="panel-title">
-	        <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">
-	        <%=a.title%> | <%=a.director%> | <%=a.year%> | <a href="<%=a.link%>">Watch</a></a>
+	        <div data-toggle="collapse" data-parent="#accordion" href="#<%=a.id%>">
+	        	<div class="title heading"><p>Title</p><%=a.title%></div>
+	        	<div class="director heading"><p>Director</p><%=a.director%></div>
+	        	<div class="year heading"><p>Year</p><%=a.year%></div>
+	        	<a target="_blank" href="<%=full_url(a.link)%>" class="btn btn-primary clickable">Watch</a>
+	        	<%= link_to 'Edit', edit_anime_path(a), class: "btn btn-default clickable" %>
+	        </div>
 	      </h4>
 	    </div>
-	    <div id="collapse1" class="panel-collapse collapse in">
+	    <div id="<%=a.id%>" class="panel-collapse collapse">
 	      <div class="panel-body">
 	      	<div class="row">
-	      		<div class="col-md-8">
+	      		<div class="col-md-8 col-sm-7 col-xs-6 about">
 	      			<%=a.about%>
 	      		</div>
-	      		<div class="col-md-4">
-	      			<%=a.image%>
+	      		<div class="col-md-4 col-sm-5 col-xs-6">
+	      			<img src=<%=a.image%>>
 	      		</div>
 	      	</div>
 	      </div>

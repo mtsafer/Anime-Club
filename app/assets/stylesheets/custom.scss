@@ -1,0 +1,76 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+body{
+	background: url('http://www.randomanime.org/images/background.jpg') center center fixed no-repeat;
+	text-align: center;
+}
+
+h1{
+	font-weight: bold;
+	color: white;
+	background-color: rgba(0,0,0,0.7);
+	max-width: 250px;
+	margin: auto;
+}
+
+h3{
+	display: inline;
+}
+
+.about{
+	color: #00C8FF;
+}
+
+.panel{
+	background-color: rgba(0,0,0,0.7);
+}
+
+.panel>.panel-heading{
+	background-color: rgba(255,255,255,0.7);
+}
+
+.big_header{
+	display: inline-block;
+	width: 25%;
+}
+
+.big_header.title{
+	margin-left: 10px
+}
+
+.big_header.director{
+	width: 20%;
+}
+
+label{
+	display: block;
+}
+
+textarea{
+	height: 150px;
+	width: 400px;
+}
+
+.heading{
+	width: 25%;
+	display: inline-block;
+}
+
+.heading{
+	text-align: center;
+}
+
+.block{
+	display: block;
+}
+
+.btn-primary{
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+img {
+    width: 70%;
+    height: auto;
+}
