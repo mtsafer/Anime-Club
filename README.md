@@ -1,24 +1,15 @@
-# README
+# Anime Club
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Visit the club [here](https://dry-island-46756.herokuapp.com/)
 
-Things you may want to cover:
+To contribute to the list visit the link above and click the 'Add Anime' button.
 
-* Ruby version
+required fields: 
 
-* System dependencies
+* Title
 
-* Configuration
+* Director
 
-* Database creation
+* Year
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* About (Please no sploilers, this should really be a 'why watch this show')
