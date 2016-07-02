@@ -38,6 +38,13 @@ class AnimesController < ApplicationController
   	@anime = Anime.find(params[:id])
   end
 
+  def destroy
+    @anime = Anime.find(params[:id])
+    flash[:success] = "#{@anime.title} has been deleted!"
+    @anime.destroy
+    redirect_to root_path
+  end
+
   private 
 
   def whitelist

@@ -11,6 +11,7 @@
 	        	<div class="year heading"><p>Year</p><%=a.year%></div>
 	        	<a target="_blank" href="<%=full_url(a.link)%>" class="btn btn-primary clickable">Watch</a>
 	        	<%= link_to 'Edit', edit_anime_path(a), class: "btn btn-default clickable" %>
+						<%= link_to 'Delete',anime_path(a.id), method: :delete, data: {confirm: "Are you sure?"}, class: "btn btn-danger" %>
 	        </div>
 	      </h4>
 	    </div>
