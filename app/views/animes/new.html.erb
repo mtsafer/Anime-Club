@@ -1,20 +1,3 @@
 <h1>Add an Anime</h1>
 
-<%= link_to "Back", root_path, class: "btn btn-primary" %>
-<%= form_for @anime do |f| %>
-	<%= f.label 'Title*' %>
-	<%= f.text_field :title, placeholder: 'Title' %>
-	<%= f.label 'Director*' %>
-	<%= f.text_field :director, placeholder: 'Director' %>
-	<%= f.label 'Year*' %>
-	<%= f.text_field :year, placeholder: 'YYYY' %>
-	<%= f.label 'About*' %>
-	<%= f.text_area :about, placeholder: 'No spoilers please!' %>
-	<%= f.label :Link %>
-	<%= f.text_field :link, placeholder: 'Where to watch the show' %>
-	<%= f.label :Image %>
-	<%= f.text_field :image, placeholder: 'URL to image' %>
-	<p></p>
-	<p>*  required</p>
-	<%= f.submit "Submit!", class: "btn btn-primary block" %>
-<% end %>
+<%= render 'layouts/form', locals:{anime: @anime} %>

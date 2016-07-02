@@ -6,12 +6,40 @@ body{
 	text-align: center;
 }
 
+.flash{
+	border-radius: 8px;
+	max-width: 300px;
+	margin: auto;
+}
+
+.success{
+	background-color: rgba(26,219,9,0.8);
+}
+
+.warning{
+	background-color: rgba(230,128,73,0.8);
+}
+
+.danger{
+	background-color: rgba(242,12,12,0.7);
+}
+
+.alert{
+	max-width: 275px;
+	margin: auto;
+}
+
+li{
+	list-style: none;
+}
+
 h1{
 	font-weight: bold;
 	color: white;
 	background-color: rgba(0,0,0,0.7);
 	max-width: 250px;
 	margin: auto;
+	margin-top: 10px;
 }
 
 h3{
@@ -45,6 +73,10 @@ h3{
 
 label{
 	display: block;
+	color: white;
+	background-color: rgba(0,0,0,0.7);
+	max-width: 100px;
+	margin: auto;
 }
 
 textarea{
@@ -73,4 +105,8 @@ textarea{
 img {
     width: 70%;
     height: auto;
+}
+
+input{
+	margin: auto;
 }

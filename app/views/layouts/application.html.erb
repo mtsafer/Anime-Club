@@ -5,13 +5,17 @@
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    
   </head>
 
   <body>
   	<div class="container">
+      <%flash.each do |f|%>
+        <h4 class="<%= f[0] %> flash"><%=f[1]%></h4>
+      <% end %>
     	<%= yield %>
     </div>
   </body>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload'%>
+    <%= javascript_include_tag "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js", "data-turbolinks-eval": false %>
 </html>

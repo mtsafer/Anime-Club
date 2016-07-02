@@ -9,13 +9,20 @@ class AnimesController < ApplicationController
       flash[:success] = "#{@anime.title} has been added to the list!"
       redirect_to root_path
     else
-      flash.now[:warning] = "Something went wrong! Check the required fields."
-      render :new
+      flash.now[:danger] = "Something went wrong! Check the required fields."
+      render new_anime_path
     end
   end
 
   def update
-  	
+  	@anime = Anime.find(params[:id])
+    if @anime.update(whitelist)
+      flash[:success] = "#{@anime.title} has been updated!"
+      redirect_to root_path
+    else
+      flash.now[:danger] = "Something went wrong! Check the required fields."
+      render 'edit'
+    end
   end
 
   def index
@@ -24,6 +31,7 @@ class AnimesController < ApplicationController
 
   def show
   	@anime = Anime.find(params[:id])
+    redirect_to edit_anime_path(params[:id])
   end
 
   def edit
