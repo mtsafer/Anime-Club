@@ -1,0 +1,25 @@
+<h1>Anime Club</h1>
+<div class="panel-group" id="accordion">
+	<% @anime.each do |a| %>
+		<div class="panel panel-default">
+	    <div class="panel-heading">
+	      <h4 class="panel-title">
+	        <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">
+	        <%=a.title%> | <%=a.director%> | <%=a.year%> | <a href="<%=a.link%>">Watch</a></a>
+	      </h4>
+	    </div>
+	    <div id="collapse1" class="panel-collapse collapse in">
+	      <div class="panel-body">
+	      	<div class="row">
+	      		<div class="col-md-8">
+	      			<%=a.about%>
+	      		</div>
+	      		<div class="col-md-4">
+	      			<%=a.image%>
+	      		</div>
+	      	</div>
+	      </div>
+	    </div>
+  	</div>
+	<% end %>
+</div>
