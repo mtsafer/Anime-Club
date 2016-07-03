@@ -4,6 +4,7 @@ class CreateAnimes < ActiveRecord::Migration[5.0]
       t.string :title
       t.string :director
       t.integer :year
+      t.integer :length
       t.string :about
       t.string :link
       t.string :image

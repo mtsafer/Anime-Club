@@ -52,6 +52,7 @@ h3{
 
 .panel{
 	background-color: rgba(0,0,0,0.7);
+	min-width: 600px;
 }
 
 .panel>.panel-heading{
@@ -77,6 +78,11 @@ label{
 	background-color: rgba(0,0,0,0.7);
 	max-width: 100px;
 	margin: auto;
+	border-radius: 4px;
+}
+
+.buttons{
+	display: inline-block;
 }
 
 textarea{
@@ -85,7 +91,7 @@ textarea{
 }
 
 .heading{
-	width: 25%;
+	width: 19%;
 	display: inline-block;
 }
 

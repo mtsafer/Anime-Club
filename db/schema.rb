@@ -16,6 +16,7 @@ ActiveRecord::Schema.define(version: 20160702171330) do
     t.string   "title"
     t.string   "director"
     t.integer  "year"
+    t.integer  "length"
     t.string   "about"
     t.string   "link"
     t.string   "image"

@@ -49,6 +49,6 @@ class AnimesController < ApplicationController
 
   def whitelist
     params.require(:anime).permit(:title, :director, :year,
-                                  :about, :link, :image)
+                                  :about, :link, :image, :length)
   end
 end

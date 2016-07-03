@@ -20,6 +20,8 @@
 	<%= f.text_field :director, placeholder: 'Director', value: @anime.director %>
 	<%= f.label 'Year*' %>
 	<%= f.text_field :year, placeholder: 'YYYY', value: @anime.year %>
+	<%= f.label 'Length*' %>
+	<%= f.text_field :length, placeholder: '# of epsiodes', value: @anime.length %>
 	<%= f.label 'About*' %>
 	<%= f.text_area :about, placeholder: 'No spoilers please!', value: @anime.about %>
 	<%= f.label :Link %>
