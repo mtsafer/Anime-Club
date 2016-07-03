@@ -1,9 +1,15 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+@font-face {
+  font-family: "Oxygen";
+  src: url(/assets/fonts/Oxygen-Regular.ttf) format("truetype");
+}
+
 body{
 	background: url('http://www.randomanime.org/images/background.jpg') center center fixed no-repeat;
 	text-align: center;
+	font-family: 'Oxygen'
 }
 
 .flash{
@@ -40,10 +46,21 @@ h1{
 	max-width: 250px;
 	margin: auto;
 	margin-top: 10px;
+	border-radius: 4px;
+}
+
+h2{
+	font-weight: bold;
 }
 
 h3{
 	display: inline;
+}
+
+.spec{
+	display: inline-block;
+	width: 45%;
+	font-weight: bold;
 }
 
 .about{
@@ -56,7 +73,7 @@ h3{
 }
 
 .panel>.panel-heading{
-	background-color: rgba(255,255,255,0.7);
+	background-color: rgba(255,255,255,0.5);
 }
 
 .big_header{
@@ -91,12 +108,22 @@ textarea{
 }
 
 .heading{
-	width: 19%;
+	width: 30%;
 	display: inline-block;
 }
 
 .heading{
 	text-align: center;
+	color: #0047ab;
+}
+
+.heading.title{
+	text-align: left;
+	font-weight: bold;
+}
+
+.heading.length{
+	font-weight: bold;
 }
 
 .block{

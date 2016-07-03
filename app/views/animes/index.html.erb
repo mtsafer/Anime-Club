@@ -6,10 +6,8 @@
 	    <div class="panel-heading">
 	      <h4 class="panel-title">
 	        <div data-toggle="collapse" data-parent="#accordion" href="#<%=a.id%>">
-	        	<div class="title heading"><p>Title</p><%=a.title%></div>
-	        	<div class="director heading"><p>Director</p><%=a.director%></div>
-	        	<div class="year heading"><p>Year</p><%=a.year%></div>
-	        	<div class="year heading"><p>Length</p><%=a.length%> episodes</div>
+	        	<div class="title heading"><h2><%=a.title%></h2></div>
+	        	<div class="length heading"><%=a.length%> episodes</div>
 		        <div class="buttons">	
 		        	<a target="_blank" href="<%=full_url(a.link)%>" class="btn btn-primary clickable">Watch</a>
 		        	<%= link_to 'Edit', edit_anime_path(a), class: "btn btn-default clickable" %>
@@ -23,6 +21,13 @@
 	      	<div class="row">
 	      		<div class="col-md-8 col-sm-7 col-xs-6 about">
 	      			<%=a.about%>
+	      			<br>
+	      			<br>
+	      			<br>
+	      			<div class="specs">
+				      	<div class="director spec"><p>Director: <%=a.director%></p></div>
+			        	<div class="year spec"><p>Year: <%=a.year%></p></div>
+	      			</div>
 	      		</div>
 	      		<div class="col-md-4 col-sm-5 col-xs-6">
 	      			<img src=<%=a.image%>>
